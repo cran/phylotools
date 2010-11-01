@@ -39,14 +39,13 @@ See Also \code{\link{supermat}}
 ## add.mat examle ########
 dir <- system.file("extdata", package = "phylotools")
 setwd(dir)
-rbcla <- read.phy("rbcla.phy")
-matk <- read.phy("matK.phy" )
+rbcla <- read.phylip("rbcla.phy")
+matk <- read.phylip("matK.phy" )
 rbdat <- phy2dat(rbcla)
 matdat <- phy2dat(matk)
 add.mat(rbdat, matdat)
 
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
+
 \keyword{ matrix }
 

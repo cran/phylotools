@@ -16,7 +16,7 @@ sub.tip.label(tree, dat)
   Phylogenetic tree
 }
   \item{dat}{
-A two column dataframe with the first the newnames of tip labels and the second the accordings.
+A dataframe with the first the tip labels and the second the substitutions.
 }
 }
 \details{
@@ -39,7 +39,7 @@ library(ape)
 data(bird.families)
 tips <- bird.families$tip.label
 abr <- paste("fam",1:length(tips), sep = "")
-dat <- data.frame(abr, tips)
+dat <- data.frame(tips, abr)
 ntree <- sub.tip.label(bird.families, dat)
 }
 

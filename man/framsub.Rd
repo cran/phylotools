@@ -42,7 +42,7 @@ See Also  \code{\link{edgesub}}
 ##framsub examle ########
 dir <- system.file("extdata", package = "phylotools")
 setwd(dir)
-testphy <- read.phy("rbcla.phy")
+testphy <- read.phylip("rbcla.phy")
 testdat <- phy2dat(testphy)
 framsub(testdat)
 

@@ -12,17 +12,18 @@ This package currently consists of a few functions for handling DNA-barcoding se
 \tabular{ll}{
 Package: \tab phylotools\cr
 Type: \tab Package\cr
-Version: \tab 0.0.2\cr
-Date: \tab 2010-10-23\cr
+Version: \tab 0.0.7.4\cr
+Date: \tab 2010-11-1\cr
 License: \tab GLP-2\cr
 LazyLoad: \tab yes\cr
 }
 
 }
 \author{
-Jinlong Zhang, Xiangcheng Mi, Nancai Pei
+Jinlong Zhang, with contributions by Xiangcheng Mi, Nancai Pei
 
 Maintainer: Jinlong Zhang <jinlongzhang01@gmail.com>
+
 }
 \references{
 Kress W., Erickson D., Jones F., Swenson N., Perez R., Sanjur O., Bermingham E., Plant DNA barcodes and community phylogeny of a tropical forest dynamics plot in Panama. Proceedings of the National Academy of Sciences of the United States of America. 2009 18621-18626

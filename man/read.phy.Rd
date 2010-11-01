@@ -1,5 +1,5 @@
-\name{read.phy}
-\alias{read.phy}
+\name{read.phylip}
+\alias{read.phylip}
 
 \title{
 Read phylip file to memory.
@@ -8,7 +8,7 @@ Read phylip file to memory.
 Read phylip file to memory.
 }
 \usage{
-read.phy(fil = NULL)
+read.phylip(fil = NULL)
 }
 \arguments{
   \item{fil}{
@@ -38,11 +38,11 @@ See Also as \code{\link{readLines}}
 }
 \examples{
 
-## read.phy examle ########
+## read.phylip() examle ########
 
 dir <- system.file("extdata", package = "phylotools")
 setwd(dir)
-read.phy("rbcla.phy")
+read.phylip("rbcla.phy")
 
 }
 

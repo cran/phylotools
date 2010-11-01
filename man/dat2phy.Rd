@@ -43,7 +43,7 @@ See Also \code{\link{phy2dat}}
 ##Convert dataframe to phylip object
 dir <- system.file("extdata", package = "phylotools")
 setwd(dir)
-test <- read.phy("matK.phy")
+test <- read.phylip("matK.phy")
 test2 <- phy2dat(test)
 dat2phy(test2)
 

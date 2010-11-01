@@ -1,3 +1,8 @@
+#### Function phy2dat as part of R package phylotools
+#### By Jinlong Zhang  <Jinlongzhang01@gmail.com>
+#### Institute of Botany, the Chinese Academy of Sciences, Beijing ,China
+#### Nov- 01-2011
+
 phy2dat <-
 function(x) {
 	dd <- x
@@ -27,7 +32,8 @@ function(x) {
 	    
 	    nBlock <- length(x)/length(seqNam)
 	    col.add <- rep(seqNam, nBlock)
-	    ## Core program adopted from Qiong Ding
+	    
+		## Core program adopted from Qiong Ding
 	    for (i in 1:nspecies) {
 	    	nBlock = length(x)/length(seqNam)
 	    	rNam = ((1:nBlock) - 1) * nspecies + i
