@@ -39,7 +39,7 @@ See Also \code{\link{phy2dat}}
 }
 \examples{
 
-##dat2phy examle ########
+##dat2phy example ########
 ##Convert dataframe to phylip object
 dir <- system.file("extdata", package = "phylotools")
 setwd(dir)

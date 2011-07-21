@@ -19,7 +19,7 @@ the fasta object.
 Dataframe with first column of the names of the sequences , the second column which name to change into.
 }
   \item{fil}{
-A string indicating the file name, the result writen to.
+A string indicating the file name, the result written to.
 }
   \item{prefix}{
 prefix of which the names of the sequences.
@@ -57,7 +57,6 @@ reftable.rename <- data.frame(col1, col2)
 rename.fasta(fil.fas, reftable.rename)
 
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+
+\keyword{ fasta }
+

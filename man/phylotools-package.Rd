@@ -12,15 +12,15 @@ This package currently consists of a few functions for handling DNA-barcoding se
 \tabular{ll}{
 Package: \tab phylotools\cr
 Type: \tab Package\cr
-Version: \tab 0.0.7.4\cr
-Date: \tab 2010-11-1\cr
+Version: \tab 0.1.1\cr
+Date: \tab 2010-7-21\cr
 License: \tab GLP-2\cr
 LazyLoad: \tab yes\cr
 }
 
 }
 \author{
-Jinlong Zhang, with contributions by Xiangcheng Mi, Nancai Pei
+Jinlong Zhang, with contributions by Nancai Pei, Xiangcheng Mi
 
 Maintainer: Jinlong Zhang <jinlongzhang01@gmail.com>
 
@@ -31,6 +31,11 @@ Kress W., Erickson D., Jones F., Swenson N., Perez R., Sanjur O., Bermingham E.,
 
 \keyword{ package }
 \examples{
+
+
+###############################################
+## Example Part I###Building Supermatrix########
+###############################################
 
 ### Build super matrix
 dir <- system.file("extdata", package = "phylotools")
@@ -44,4 +49,98 @@ write.mat(supermat, "result.phy")
 
 ## Delete file
 unlink("result.phy")
+
+
+
+###############################################
+## Example Part II###Create a image plot#######
+###############################################
+
+## Create an Image with legend from named numerical vectors
+x <- rnorm(600)
+labmat <- expand.grid(paste("X",1:30, sep = ""), 
+                  paste("Y", 1:20, sep = ""))
+                  
+lab <- paste(labmat[,1], labmat[,2], sep = "")
+imagevect(x, labels = lab, col = cm.colors(10))
+
+
+
+###############################################
+## Example Part III###Handling fasta project###
+###############################################
+
+## Handling Fasta files
+library(seqRFLP)
+## loading data
+data(fil.fas)
+## Get the names of the sequences
+col1 <- gnames.fas(fil.fas)
+## Generating new names
+col2 <- paste("seq", 1:length(col1), sep = "")
+reftable.rename <- data.frame(col1, col2)
+renamed <- rename.fasta(fil.fas, reftable.rename)
+
+##Generate split factor levels.
+index <- rep(NA, length(col2))
+level1 <- seq(1, length(col2), by = 2)
+index[level1] <- 1
+index[-level1] <- 2
+
+## Reference table
+reftable.split <- data.frame(col2, index)
+
+## split the fasta object
+fasta.split(renamed, reftable.split)
+
+
+
+#################################################
+## Example Part IV###Phylosor for very large data
+#################################################
+## Make sure the PhyloCom can be invoked by command line
+## res <- phylocom.phylosor(sample.file = "sample",
+##                                phylo = "phylo")
+
+
+
+#################################################
+## Example Part V###Rescale the FDP data #######
+## to different scales ##########################
+#################################################
+## 20m                                
+## plotscale(inputdata = BCI, len = 1000, wid = 500,
+##           scale = 20)
+## 50m                                
+## plotscale(inputdata = BCI, len = 1000, wid = 500, 
+##           scale = 50)
+## 100m                                
+## plotscale(inputdata = BCI, len = 1000, wid = 500, 
+##          scale = 100)
+
+
+
+##################################################
+## Example Part VI### 
+## Lineages inequality and 
+## Mean Gini Coefficient amonge 
+## lineages caused by imperfect sampling 
+##################################################
+data(bird.orders)
+rtr1 <- del.tree.tip(bird.orders,3)
+inequality(bird.orders, rtr1[[1]], h = 25.25103)
+
+
+data(bird.orders)
+to.drop <- c("Craciformes", "Galliformes", "Gruiformes")
+droped <- drop.tip(bird.orders, to.drop)
+meangini(tree = bird.orders, subtree = droped, 
+         times = 10, plot = TRUE)
+meangini(tree = bird.orders, subtree = droped, 
+         times = 50, plot = TRUE)
+meangini(tree = bird.orders, subtree = droped, 
+          times = 100, plot = TRUE)
+meangini(tree = bird.orders, subtree = droped, 
+          times = 200, plot = TRUE)
+          
 }

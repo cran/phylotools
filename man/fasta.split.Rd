@@ -2,10 +2,10 @@
 \alias{fasta.split}
 
 \title{
-Splite the fasta object to fasta objects
+Split the fasta object to fasta objects
 }
 \description{
-Splite the fasta object to fasta objects according to the groups given
+Split the fasta object to fasta objects according to the groups given
 }
 \usage{
 fasta.split(fasta, ref, save2disk = FALSE)
@@ -23,7 +23,7 @@ Whether to save the groups of fasta files to separate files
 }
 }
 \details{
-This function may be used to splite the trnH-psbA sequences, given the order ( usually APGIII ) it belongs to.
+This function may be used to split the trnH-psbA sequences, given the order ( usually APGIII ) it belongs to.
 }
 \value{
 Returns a list, indicate the groups for the sequences

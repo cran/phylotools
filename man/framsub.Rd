@@ -25,7 +25,7 @@ A character to be replaced.
 This is a general application of the function \code{\link{edgesub}}.The only the matched characters at the egde of the input DNA string will be replaced.
 }
 \value{
-A dataframe with the matched chacters at the two edges replaced.
+A dataframe with the matched characters at the two edges replaced.
 }
 \references{
 Kress W., Erickson D., Jones F., Swenson N., Perez R., Sanjur O., Bermingham E., Plant DNA barcodes and community phylogeny of a tropical forest dynamics plot in Panama. Proceedings of the National Academy of Sciences of the United States of America. 2009 18621-18626
@@ -39,7 +39,7 @@ See Also  \code{\link{edgesub}}
 }
 \examples{
 
-##framsub examle ########
+##framsub example ########
 dir <- system.file("extdata", package = "phylotools")
 setwd(dir)
 testphy <- read.phylip("rbcla.phy")

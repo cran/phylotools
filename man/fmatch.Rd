@@ -42,7 +42,7 @@ See Also \code{\link{edgesub}} for a general application of this function.
 }
 \examples{
 
-### fmatch  examle ########
+### fmatch  example ########
 dna = "---ATTGCCTTAS--TTTAAAAAACCGTTC-----"
 fmatch(dna, "-")
 
