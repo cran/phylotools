@@ -2,7 +2,7 @@
 #### This function is part of R package phylotools
 #### By Jinlong Zhang  <Jinlongzhang01@gmail.com>
 #### Institute of Botany, the Chinese Academy of Sciences, Beijing ,China
-#### Oct- 30- 2011
+#### Oct- 30- 2010
 
 
 rename.fasta <- 

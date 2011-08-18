@@ -1,3 +1,8 @@
+#### Function phylocom.comdist as part of R package phylotools
+#### By Jinlong Zhang  <Jinlongzhang01@gmail.com>
+#### Institute of Botany, the Chinese Academy of Sciences, Beijing ,China
+#### Nov- 01-2010
+
 phylocom.comdist <-
 function(sample = "sample", phylo = "phylo", method = "comdist",aw = TRUE, file = "comdist.txt"){
     files <- list.files()
@@ -15,11 +20,13 @@ function(sample = "sample", phylo = "phylo", method = "comdist",aw = TRUE, file 
     } else{
         a = NULL
     }
+    
     if(method == "comdistn") {
         pc <- "comdistnn"
     } else {
         pc <- "comdist"
     }
+    
     shell(Sys.which(paste("phylocom", pc, "-s",sample, "-f", phylo, a,"> ", file )), 
            intern = FALSE, mustWork = NA)
     cd <- read.table(file, header = TRUE, row.names=1, sep="\t")

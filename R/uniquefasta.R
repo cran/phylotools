@@ -3,7 +3,7 @@
 #### By Jinlong Zhang  <Jinlongzhang01@gmail.com>
 #### Institute of Botany, the Chinese Academy of Sciences, Beijing ,China
 #### Oct- 30- 2011
-#### Bug fixed  Nov.-01-2011
+#### Bug fixed  Nov.-01-2010
 
 uniquefasta <- 
 function(fasta){
